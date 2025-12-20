@@ -1,8 +1,8 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { loginSchema } from "../schemas/loginSchema";
-import FormInput from "../components/FormInput";
+import { loginSchema } from "../../schemas/loginSchema";
+import FormInput from "../../components/ui/FormInput";
 
 const LoginPage = () => {
   const {
