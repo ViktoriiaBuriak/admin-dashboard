@@ -1,8 +1,11 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { loginSchema } from "../../schemas/loginSchema";
 import FormInput from "../../components/ui/FormInput";
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "../../features/authThunks";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const {
@@ -11,9 +14,19 @@ const LoginPage = () => {
     formState: { errors },
   } = useForm({ resolver: zodResolver(loginSchema) });
 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const isAuth = useSelector((s) => s.auth.isAuthenticated);
+
   const onSubmit = (data) => {
-    console.log("Login data: ", data);
+    dispatch(login(data));
   };
+
+  useEffect(() => {
+    if (isAuth) {
+      navigate("/dashboard", { replace: true });
+    }
+  }, [isAuth, navigate]);
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50 dark:bg-gray-900">
       <form

@@ -1,8 +1,11 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import {registerSchema} from "../../schemas/registerSchema"
+import { registerSchema } from "../../schemas/registerSchema";
 import FormInput from "../../components/ui/FormInput";
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "../../features/authThunks";
+import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
   const {
@@ -11,9 +14,19 @@ const RegisterPage = () => {
     formState: { errors },
   } = useForm({ resolver: zodResolver(registerSchema) });
 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const isAuth = useSelector((s) => s.auth.isAuthenticated);
+
   const onSubmit = (data) => {
-    console.log("Register data: ", data);
+    dispatch(login(data));
   };
+
+  useEffect(() => {
+    if (isAuth) {
+      navigate("/dashboard", { replace: true });
+    }
+  }, [isAuth, navigate]);
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50 dark:bg-gray-900">
       <form
@@ -33,7 +46,7 @@ const RegisterPage = () => {
         />
         <FormInput
           label="Підтвердження пароля"
-          error={errors.password?.message}
+          error={errors.confirmPassword?.message}
           {...register("confirmPassword")}
         />
         <button
