@@ -6,6 +6,7 @@ import FormInput from "../../components/ui/FormInput";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../features/authThunks";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const LoginPage = () => {
   const {
@@ -22,6 +23,8 @@ const LoginPage = () => {
     dispatch(login(data));
   };
 
+  const { t } = useTranslation();
+
   useEffect(() => {
     if (isAuth) {
       navigate("/dashboard", { replace: true });
@@ -34,23 +37,25 @@ const LoginPage = () => {
         className="w-full max-w-md rounded-2xl bg-white dark:bg-gray-800 p-8 shadow-lg"
       >
         <h1 className="mb-6 text-center text-2xl font-semibold">
-          Вхід в систему
+          {t('login_page.title')}
         </h1>
         <FormInput
-          label="Email"
-          error={errors.email?.message}
+          label={t('login_page.email_label')}
+          placeholder={t('login_page.placeholders.email')}
+          error={errors.email?.message ? t(errors.email.message) : ""}
           {...register("email")}
         />
         <FormInput
-          label="Пароль"
-          error={errors.password?.message}
+          label={t('login_page.password_label')}
+          placeholder={t('login_page.placeholders.password')}
+          error={errors.password?.message ? t(errors.password.message) : ""}
           {...register("password")}
         />
         <button
           type="submit"
           className="w-full rounded-lg bg-violet-500 py-2 text-white hover:bg-violet-600 transition"
         >
-          Увійти
+          {t('login_page.submit_button')}
         </button>
       </form>
     </div>

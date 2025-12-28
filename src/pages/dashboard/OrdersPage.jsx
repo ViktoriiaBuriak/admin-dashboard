@@ -1,17 +1,19 @@
 import React from "react";
 import OrdersTable from "../../components/orders/OrdersTable";
 import { ordersTableData } from "../../data/ordersTableData";
+import { useTranslation } from "react-i18next";
 
 const OrdersPage = () => {
+  const {t} = useTranslation()
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-semibold">Замовлення</h1>
+        <h1 className="text-2xl font-semibold">{t('orders_page.title')}</h1>
         <p className="text-gray-500 dark:text-gray-400">
-          Повний список замовлень користувачів
+          {t('orders_page.description')}
         </p>
       </div>
-      <OrdersTable title="Всі замовлення" orders={ordersTableData} showSearch/>
+      <OrdersTable title={t('orders_page.table_title')} orders={ordersTableData} showSearch/>
     </div>
   );
 };

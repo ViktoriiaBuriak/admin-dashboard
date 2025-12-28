@@ -1,10 +1,11 @@
 import React from "react";
 
-const FormInput = ({ label, error, ...props }) => {
+const FormInput = ({ label, error, placeholder, ...props }) => {
   return (
     <div className="mb-4">
       <label className="mb-1 block text-sm">{label}</label>
       <input
+        placeholder={placeholder}
         className="w-full rounded-lg border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-violet-400"
         {...props}
       />

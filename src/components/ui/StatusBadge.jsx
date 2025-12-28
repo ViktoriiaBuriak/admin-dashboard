@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const statusStyles = {
   new: "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300",
@@ -8,18 +9,13 @@ const statusStyles = {
     "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300",
 };
 
-const statusLabes = {
-  new: "Нове",
-  processing: "В обробці",
-  completed: "Виконано",
-};
-
 const StatusBadge = ({ status }) => {
+  const { t } = useTranslation();
   return (
     <span
       className={`px-2 py-1 rounded-full text-xs font-medium ${statusStyles[status]}`}
     >
-      {statusLabes[status]}
+      {t(`status.${status}`)}
     </span>
   );
 };

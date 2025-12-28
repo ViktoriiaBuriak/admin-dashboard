@@ -1,0 +1,110 @@
+{
+  "login_page": {
+    "title": "Вхід в систему",
+    "email_label": "Email",
+    "password_label": "Пароль",
+    "submit_button": "Увійти",
+    "placeholders": {
+      "email": "Введіть ваш email",
+      "password": "Введіть пароль"
+    }
+  },
+  "auth_errors": {
+    "required": "Це поле є обов'язковим",
+    "invalid_email": "Некоректний формат email",
+    "min_password": "Пароль має бути не менше 6 символів",
+    "confirm_password": "Підтвердження пароля обовʼязкове",
+    "check_password": "Паролі не співпадають"
+  },
+  "register_page": {
+    "title": "Реєстрація",
+    "email_label": "Email",
+    "password_label": "Пароль",
+    "confirm_password_label": "Підтвердження пароля",
+    "submit_button": "Зареєструватися",
+    "placeholders": {
+      "email": "Введіть ваш email",
+      "password": "Введіть пароль",
+      "confirm_password": "Підтвердіть пароль"
+    }
+  },
+  "orders_page": {
+    "title": "Замовлення",
+    "description": "Повний список замовлень користувачів",
+    "table_title": "Всі замовлення"
+  },
+  "common": {
+    "search_placeholder": "Пошук за клієнтом...",
+    "details": "Деталі",
+    "table": {
+      "id": "ID",
+      "customer": "Клієнт",
+      "date": "Дата",
+      "amount": "Сума",
+      "status": "Статус",
+      "action": "Дія"
+    }
+  },
+  "users_page": {
+    "title": "Користувачі",
+    "table_title": "Всі користувачі",
+    "search_placeholder": "Пошук користувача...",
+    "table": {
+      "name": "Ім'я",
+      "email": "Email",
+      "role": "Роль",
+      "status": "Статус",
+      "reg_date": "Дата реєстрації"
+    }
+  },
+  "status": {
+    "active": "Активний",
+    "blocked": "Заблокований",
+    "new": "Нове",
+    "processing": "Обробляється",
+    "completed": "Виконано",
+    "admin": "Адміністратор",
+    "user": "Користувач"
+  },
+  "sidebar": {
+    "panel_name": "Адмін Панель",
+    "dashboard": "Панель приладів",
+    "orders": "Замовлення",
+    "users": "Користувачі",
+    "settings": "Налаштування"
+  },
+  "auth": {
+    "login": "Увійти",
+    "register": "Реєстрація",
+    "logout": "Вийти"
+  },
+  "footer": {
+    "rights": "Всі права захищені"
+  },
+  "main_page": {
+    "title": "Панель керування",
+    "description": "Загальний огляд системи",
+    "chart_title": "Кількість замовлень по місяцях",
+    "recent_orders": "Останні замовлення"
+  },
+  "stats": {
+    "users": "Користувачі",
+    "orders": "Замовлення",
+    "revenue": "Дохід",
+    "growth": "Ріст"
+  },
+  "landing": {
+    "hero_title_1": "Керуйте даними",
+    "hero_title_2": "швидко та зручно",
+    "hero_description": "Простий та сучасний інтерфейс адміністративної панелі для керування користувачами, замовленнями та аналітикою.",
+    "get_started": "Почати роботу",
+    "features": {
+      "stats_title": "Статистика",
+      "stats_desc": "Перегляд ключових показників у реальному часі на дашборді.",
+      "users_title": "Користувачі",
+      "users_desc": "Додавання, редагування та управління користувачами.",
+      "orders_title": "Замовлення",
+      "orders_desc": "Контроль статусів замовлень та їх обробка в один клік."
+    }
+  }
+}

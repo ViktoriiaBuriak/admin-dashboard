@@ -1,0 +1,110 @@
+{
+  "login_page": {
+    "title": "Sign In",
+    "email_label": "Email",
+    "password_label": "Password",
+    "submit_button": "Login",
+    "placeholders": {
+      "email": "Enter your email",
+      "password": "Enter password"
+    }
+  },
+  "auth_errors": {
+    "required": "This field is required",
+    "invalid_email": "Invalid email format",
+    "min_password": "Password must be at least 6 characters",
+    "confirm_password": "Password confirmation is required",
+    "check_password": "Passwords do not match"
+  },
+  "register_page": {
+    "title": "Registration",
+    "email_label": "Email",
+    "password_label": "Password",
+    "confirm_password_label": "Confirm Password",
+    "submit_button": "Sign Up",
+    "placeholders": {
+      "email": "Enter your email",
+      "password": "Enter password",
+      "confirm_password": "Confirm your password"
+    }
+  },
+  "orders_page": {
+    "title": "Orders",
+    "description": "Full list of user orders",
+    "table_title": "All Orders"
+  },
+  "common": {
+    "search_placeholder": "Search by customer...",
+    "details": "Details",
+    "table": {
+      "id": "ID",
+      "customer": "Customer",
+      "date": "Date",
+      "amount": "Amount",
+      "status": "Status",
+      "action": "Action"
+    }
+  },
+  "users_page": {
+    "title": "Users",
+    "table_title": "All Users",
+    "search_placeholder": "Search user...",
+    "table": {
+      "name": "Name",
+      "email": "Email",
+      "role": "Role",
+      "status": "Status",
+      "reg_date": "Registration Date"
+    }
+  },
+  "status": {
+    "active": "Active",
+    "blocked": "Blocked",
+    "new": "New",
+    "processing": "Processing",
+    "completed": "Completed",
+    "admin": "Administrator",
+    "user": "User"
+  },
+  "sidebar": {
+    "panel_name": "Admin Panel",
+    "dashboard": "Dashboard",
+    "orders": "Orders",
+    "users": "Users",
+    "settings": "Settings"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout"
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  },
+  "main_page": {
+    "title": "Control Panel",
+    "description": "General system overview",
+    "chart_title": "Monthly Orders Count",
+    "recent_orders": "Recent Orders"
+  },
+  "stats": {
+    "users": "Users",
+    "orders": "Orders",
+    "revenue": "Revenue",
+    "growth": "Growth"
+  },
+  "landing": {
+    "hero_title_1": "Manage data",
+    "hero_title_2": "quickly and easily",
+    "hero_description": "Simple and modern administrative panel interface for managing users, orders, and analytics.",
+    "get_started": "Get Started",
+    "features": {
+      "stats_title": "Statistics",
+      "stats_desc": "View key metrics in real-time on the dashboard.",
+      "users_title": "Users",
+      "users_desc": "Add, edit, and manage system users effectively.",
+      "orders_title": "Orders",
+      "orders_desc": "Control order statuses and process them in one click."
+    }
+  }
+}
