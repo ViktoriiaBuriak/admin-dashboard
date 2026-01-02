@@ -35,7 +35,8 @@ const SidebarContent = ({ onNavigate }) => {
 
         <button
           onClick={() => dispatch(logout())}
-          className="w-full py-2 text-red-500 border border-red-200 rounded-lg hover:bg-red-50 transition"
+          className="w-full py-2 border border-red-400/40 text-red-400 rounded-lg
+             hover:bg-red-500/10 hover:text-red-500 transition"
         >
           {t("auth.logout")}
         </button>

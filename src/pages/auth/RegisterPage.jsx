@@ -31,7 +31,7 @@ const RegisterPage = () => {
     }
   }, [isAuth, navigate]);
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-50 dark:bg-gray-900">
+    <div className="flex min-h-screen items-center justify-center bg-gray-50 dark:bg-gray-900 px-4 lg:px-0">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="w-full max-w-md rounded-2xl bg-white dark:bg-gray-800 p-8 shadow-lg"

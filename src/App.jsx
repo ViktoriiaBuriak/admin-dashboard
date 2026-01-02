@@ -8,6 +8,7 @@ import MainPage from "./pages/dashboard/MainPage";
 import OrdersPage from "./pages/dashboard/OrdersPage";
 import UsersPage from "./pages/dashboard/UsersPage";
 import ProtectedRoute from "./routes/ProtectedRoute";
+import SettingsPage from "./pages/dashboard/SettingsPage";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route index element={<MainPage />} />
           <Route path="orders" element={<OrdersPage />} />
           <Route path="users" element={<UsersPage />} />
+          <Route path="settings" element={<SettingsPage />} />
         </Route>
         </Route>
       </Routes>

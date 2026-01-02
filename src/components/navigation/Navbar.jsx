@@ -6,12 +6,15 @@ import { logout } from "../../features/authSlice";
 import MobileMenu from "./MobileMenu";
 import ThemeLanguageSwitcher from "../ui/ThemeLanguageSwitcher";
 
+
 const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const isLoggedIn = useSelector((state) => state.auth.isAuthenticated);
   const openMenu = () => setIsMobileMenuOpen(true);
   const closeMenu = () => setIsMobileMenuOpen(false);
+
+  const user = useSelector((s) => s.auth.user);
 
   return (
     <nav className="flex items-center gap-4">
@@ -33,10 +36,21 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
           </>
         ) : (
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-gray-400" />
+            {user.avatar ? (
+              <img
+                src={user.avatar}
+                alt="avatar"
+                className="w-8 h-8 rounded-full object-cover"
+              />
+            ) : (
+              <div className="w-8 h-8 rounded-full bg-gray-400 flex items-center justify-center text-white">
+                {user?.name?.[0] || "U"}
+              </div>
+            )}
             <button
               onClick={() => dispatch(logout())}
-              className="text-sm text-red-500 hover:text-red-600 transition"
+              className="px-3 py-1.5 text-sm border border-red-400/40 text-red-400 rounded-lg
+             hover:bg-red-500/10 hover:text-red-500 transition"
             >
               {t("auth.logout")}
             </button>

@@ -106,5 +106,19 @@
       "orders_title": "Orders",
       "orders_desc": "Control order statuses and process them in one click."
     }
+  },
+  "settings": {
+    "profile": "Profile",
+    "change_avatar": "Change avatar",
+    "name": "Name",
+    "email": "Email",
+    "role": "Role",
+    "change_password": "Change password",
+    "save_changes": "Save changes",
+    "appearance": {
+      "title": "Appearance",
+      "label": "Theme & Language",
+      "description": "Customize the interface appearance and language"
+    }
   }
 }
