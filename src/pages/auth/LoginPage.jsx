@@ -49,6 +49,7 @@ const LoginPage = () => {
           label={t('login_page.password_label')}
           placeholder={t('login_page.placeholders.password')}
           error={errors.password?.message ? t(errors.password.message) : ""}
+          autoComplete="new-password"
           {...register("password")}
         />
         <button

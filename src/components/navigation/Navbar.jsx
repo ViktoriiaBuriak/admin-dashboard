@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { Menu } from "lucide-react";
@@ -21,18 +21,18 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
       <div className="hidden lg:flex items-center gap-4">
         {!isLoggedIn ? (
           <>
-            <Link
+            <NavLink
               to="/login"
-              className="px-4 py-2 rounded-xl bg-purple-500 text-white hover:bg-purple-600 transition"
+              className="navbar-link"
             >
               {t("auth.login")}
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/register"
-              className="px-4 py-2 rounded-xl border border-purple-500 text-purple-500 hover:bg-purple-600 hover:text-white transition"
+              className="navbar-link"
             >
               {t("auth.register")}
-            </Link>
+            </NavLink>
           </>
         ) : (
           <div className="flex items-center gap-3">

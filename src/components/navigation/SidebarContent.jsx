@@ -16,7 +16,7 @@ const SidebarContent = ({ onNavigate }) => {
       </div>
 
       <nav className="flex flex-col gap-1 px-4">
-        <NavLink to="/dashboard" onClick={onNavigate} className="sidebar-link">
+        <NavLink to="/dashboard" end onClick={onNavigate} className="sidebar-link">
           {t("sidebar.dashboard")}
         </NavLink>
         <NavLink to="/dashboard/orders" onClick={onNavigate} className="sidebar-link">

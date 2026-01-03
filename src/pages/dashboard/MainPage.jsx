@@ -5,9 +5,12 @@ import { ordersChartData } from "../../data/ordersChartData";
 import OrdersTable from "../../components/orders/OrdersTable";
 import { ordersTableData } from "../../data/ordersTableData";
 import { useTranslation } from "react-i18next";
+import { useDashboardStats } from "../../hooks/useDashboardStats";
 
 const MainPage = () => {
   const { t } = useTranslation();
+  const { totalUsers, totalOrders, revenueFormatted } = useDashboardStats();
+
   return (
     <div className="space-y-6">
       <div>
@@ -17,9 +20,9 @@ const MainPage = () => {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-        <Card title={t("stats.users")} value="1,245" />
-        <Card title={t("stats.orders")} value="320" />
-        <Card title={t("stats.revenue")} value="$12,400" />
+        <Card title={t("stats.users")} value={totalUsers} />
+        <Card title={t("stats.orders")} value={totalOrders} />
+        <Card title={t("stats.revenue")} value={revenueFormatted} />
         <Card title={t("stats.growth")} value="+12%" />
       </div>
       <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">

@@ -47,12 +47,14 @@ const RegisterPage = () => {
           label={t('register_page.password_label')}
           placeholder={t('register_page.placeholders.password')}
           error={errors.password?.message ? t(errors.password.message) : ""}
+          autoComplete="new-password"
           {...register("password")}
         />
         <FormInput
           label={t('register_page.confirm_password_label')}
           placeholder={t('register_page.placeholders.confirm_password')}
           error={errors.confirmPassword?.message ? t(errors.confirmPassword.message) : ""}
+          autoComplete="new-password"
           {...register("confirmPassword")}
         />
         <button
